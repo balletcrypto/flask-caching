@@ -411,7 +411,7 @@ class Cache(object):
                         # might be because the key is not found in the cache
                         # or because the cached value is actually None
                         if rv is None:
-                            found = self.cache.has(cache_key)
+                            found = False
                 except Exception:
                     if self.app.debug:
                         raise
@@ -788,7 +788,7 @@ class Cache(object):
                         # might be because the key is not found in the cache
                         # or because the cached value is actually None
                         if rv is None:
-                            found = self.cache.has(cache_key)
+                            found = False
                 except Exception:
                     if self.app.debug:
                         raise
